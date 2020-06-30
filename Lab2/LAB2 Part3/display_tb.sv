@@ -1,0 +1,188 @@
+// task which drives six consecutive 7=segment displays
+// $fdisplay performs a return / new line feed; $fwrite does not
+task display_tb(input[6:0] seg_d,
+  seg_e, seg_f, seg_g, seg_h, seg_i, seg_j, seg_k, seg_l,
+  seg_m, seg_n, seg_o, Buzz
+  );
+   begin
+ // segment A
+      
+      if(seg_n[6]) $write(" _ ");
+          else         $write("   ");
+      $write(" ");
+          if(seg_o[6]) $write(" _ ");
+          else         $write("   ");
+      $write(" ");
+          if(seg_l[6]) $write(" _ ");
+          else         $write("   ");
+      $write(" ");
+          if(seg_m[6]) $write(" _ ");
+          else         $write("   ");
+      $write(" ");
+          if(seg_k[6]) $write(" _ ");
+          else         $write("   ");
+      $write(" ");
+	  if(seg_d[6]) $write(" _ ");
+	  else         $write("   ");
+	  $write("  ");
+	  if(seg_e[6]) $write(" _ ");
+	  else         $write("   ");
+      $write(" ");
+	  if(seg_f[6]) $write(" _ ");
+	  else         $write("   ");
+      $write(" ");
+          if(seg_g[6]) $write(" _ ");
+          else         $write("   ");
+
+      $display("");	   
+// segments FGB
+
+          if(seg_n[1]) $write("|");
+	  else $write(" ");
+	  if(seg_n[0]) $write("_");
+	  else $write(" ");
+	  if(seg_n[5]) $write("|");
+	  else $write(" ");
+
+	  $write(" ");
+          if(seg_o[1]) $write("|");
+	  else $write(" ");
+	  if(seg_o[0]) $write("_");
+	  else $write(" ");
+	  if(seg_o[5]) $write("|");
+	  else $write(" ");
+
+	  $write(" ");
+          if(seg_l[1]) $write("|");
+	  else $write(" ");
+	  if(seg_l[0]) $write("_");
+	  else $write(" ");
+	  if(seg_l[5]) $write("|");
+	  else $write(" ");
+
+	  $write(" ");
+          if(seg_m[1]) $write("|");
+	  else $write(" ");
+	  if(seg_m[0]) $write("_");
+	  else $write(" ");
+	  if(seg_m[5]) $write("|");
+	  else $write(" ");
+
+	  $write(" ");
+          if(seg_k[1]) $write("|");
+	  else $write(" ");
+	  if(seg_k[0]) $write("_");
+	  else $write(" ");
+	  if(seg_k[5]) $write("|");
+	  else $write(" ");
+
+	  $write(" ");
+	  if(seg_d[1]) $write("|");
+	  else $write(" ");
+	  if(seg_d[0]) $write("_");
+	  else $write(" ");
+	  if(seg_d[5]) $write("|");
+	  else $write(" ");
+
+	  $write("  ");
+	  if(seg_e[1]) $write("|");
+	  else $write(" ");
+	  if(seg_e[0]) $write("_");
+	  else $write(" ");
+	  if(seg_e[5]) $write("|");
+	  else $write(" ");
+
+	  $write(" ");
+	  if(seg_f[1]) $write("|");
+	  else $write(" ");
+	  if(seg_f[0]) $write("_");
+	  else $write(" ");
+	  if(seg_f[5]) $write("|");
+	  else $write(" ");
+
+          $write(" ");
+	  if(seg_g[1]) $write("|");
+	  else $write(" ");
+	  if(seg_g[0]) $write("_");
+	  else $write(" ");
+	  if(seg_g[5]) $write("|");
+	  else $write(" ");
+
+	  $display("");
+  // segments EDC
+      if(seg_n[2]) $write("|");
+	  else $write(" ");
+	  if(seg_n[3]) $write("_");
+	  else $write(" ");
+	  if(seg_n[4]) $write("|");
+	  else $write(" ");
+
+	  $write(" ");
+      if(seg_o[2]) $write("|");
+	  else $write(" ");
+	  if(seg_o[3]) $write("_");
+	  else $write(" ");
+	  if(seg_o[4]) $write("|");
+	  else $write(" ");
+
+	  $write(" ");
+      if(seg_l[2]) $write("|");
+	  else $write(" ");
+	  if(seg_l[3]) $write("_");
+	  else $write(" ");
+	  if(seg_l[4]) $write("|");
+	  else $write(" ");
+
+	  $write(" ");
+      if(seg_m[2]) $write("|");
+	  else $write(" ");
+	  if(seg_m[3]) $write("_");
+	  else $write(" ");
+	  if(seg_m[4]) $write("|");
+	  else $write(" ");
+
+	  $write(" ");
+      if(seg_k[2]) $write("|");
+	  else $write(" ");
+	  if(seg_k[3]) $write("_");
+	  else $write(" ");
+	  if(seg_k[4]) $write("|");
+	  else $write(" ");
+
+	  $write(" ");
+      if(seg_d[2]) $write("|");
+	  else $write(" ");
+	  if(seg_d[3]) $write("_");
+	  else $write(" ");
+	  if(seg_d[4]) $write("|");
+	  else $write(" ");
+
+	  $write("  ");
+      if(seg_e[2]) $write("|");
+	  else $write(" ");
+	  if(seg_e[3]) $write("_");
+	  else $write(" ");
+	  if(seg_e[4]) $write("|");
+	  else $write(" ");
+
+	  $write(" ");
+      if(seg_f[2]) $write("|");
+	  else $write(" ");
+	  if(seg_f[3]) $write("_");
+	  else $write(" ");
+	  if(seg_f[4]) $write("|");
+	  else $write(" ");
+         
+          $write(" ");
+      if(seg_g[2]) $write("|");
+	  else $write(" ");
+	  if(seg_g[3]) $write("_");
+	  else $write(" ");
+	  if(seg_g[4]) $write("|");
+	  else $write(" ");
+
+	  if(Buzz) $display("   BUZZ!!!");
+	  $display("");
+//	  $fclose("list.txt");
+	end
+endtask
