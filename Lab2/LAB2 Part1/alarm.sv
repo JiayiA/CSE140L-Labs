@@ -11,4 +11,6 @@ module alarm #(parameter NH=24, NS=60)(
   always_comb
     buzz = tmin==amin && thrs==ahrs;
 
+    RANDOM SHIT
+
 endmodule
